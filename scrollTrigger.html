@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP - ScrollTrigger</title>
+    <link rel="stylesheet" href="./src/assets/style.css" />
+  </head>
+  <body>
+    <!-- scroll down illusion -->
+    <div class="flex vContainer">
+      <div
+        class="w-screen h-screen grid place-items-center min-w-[100vw] bg-blue-400"
+      >
+        Hello
+      </div>
+      <div
+        class="w-screen h-screen grid place-items-center min-w-[100vw] bg-red-400"
+      >
+        First Slide
+      </div>
+      <div
+        class="w-screen h-screen grid place-items-center min-w-[100vw] bg-zinc-400"
+      >
+        Second Slide
+      </div>
+      <div
+        class="w-screen h-screen grid place-items-center min-w-[100vw] bg-emerald-400"
+      >
+        Third Slide
+      </div>
+    </div>
+    <!-- scrub animation -->
+    <div class="h-[100vh] my-40 w-screen flex flex-col justify-between">
+      <div
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white a"
+      >
+        a
+      </div>
+      <div
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white b"
+      >
+        b
+      </div>
+      <div
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white c"
+      >
+        c
+      </div>
+    </div>
+    <div class="relative w-screen h-screen mainContainer">
+      <div
+        class="bg-blue-400 absolute inset-0 grid place-items-center overflow-hidden hello"
+      >
+        Hello
+      </div>
+      <div
+        class="bg-red-400 absolute inset-0 grid place-items-center overflow-hidden top-[100%] first"
+      >
+        First Slide
+      </div>
+      <div
+        class="bg-zinc-400 absolute inset-0 grid place-items-center overflow-hidden left-[100%] second"
+      >
+        Second Slide
+      </div>
+      <div
+        class="bg-emerald-400 absolute inset-0 grid place-items-center overflow-hidden right-[100%] third"
+      >
+        Third Slide
+      </div>
+    </div>
+    <script type="module" src="/src/scrollTrigger.ts"></script>
+  </body>
+</html>
