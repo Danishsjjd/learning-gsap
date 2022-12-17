@@ -5,3 +5,31 @@
 body {
   overflow-x: hidden;
 }
+
+.imgContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 1rem;
+}
+
+[data-grid="img-1"] {
+  grid-area: 1 / 1 / 5 / 5;
+}
+[data-grid="img-2"] {
+  grid-area: 1 / 5 / 3 / 7;
+}
+[data-grid="img-3"] {
+  grid-area: 3 / 5 / 5 / 7;
+}
+[data-grid="img-4"] {
+  grid-area: 5 / 5 / 7 / 7;
+}
+[data-grid="img-5"] {
+  grid-area: 5 / 3 / 7 / 5;
+}
+[data-grid="img-6"] {
+  grid-area: 5 / 1 / 7 / 3;
+}

@@ -28,3 +28,24 @@ btn.onclick = () => {
     },
   });
 };
+
+const images = gsap.utils.toArray(".imgContainer figure") as HTMLImageElement[];
+let bigImage = images[0];
+
+images.forEach((img) => {
+  img.addEventListener("click", () => {
+    changeGrid(img);
+  });
+});
+
+const changeGrid = (img: HTMLImageElement) => {
+  if (img === bigImage) return;
+
+  const state = Flip.getState(images);
+
+  bigImage.dataset.grid = img.dataset.grid;
+  img.dataset.grid = "img-1";
+  bigImage = img;
+
+  Flip.from(state, { duration: 0.5, absolute: true });
+};
