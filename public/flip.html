@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP - Flip</title>
+    <link rel="stylesheet" href="../src/assets/style.css" />
+  </head>
+  <body>
+    <div class="imgContainer">
+      <figure data-grid="img-1">
+        <img
+          src="https://source.unsplash.com/random/400x400"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+      <figure data-grid="img-2">
+        <img
+          src="https://source.unsplash.com/random/400x401"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+      <figure data-grid="img-3">
+        <img
+          src="https://source.unsplash.com/random/400x402"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+      <figure data-grid="img-4">
+        <img
+          src="https://source.unsplash.com/random/400x403"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+      <figure data-grid="img-5">
+        <img
+          src="https://source.unsplash.com/random/400x404"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+      <figure data-grid="img-6">
+        <img
+          src="https://source.unsplash.com/random/400x405"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </figure>
+    </div>
+    <button
+      class="rounded-full px-4 py-2 text-lg bg-slate-700 text-white mx-auto block my-4"
+      id="changeBtn"
+    >
+      Toggle
+    </button>
+    <div
+      class="bg-red-400/80 w-60 h-96 m-20 rounded-lg p-2 container overflow-hidden relative"
+    >
+      <div
+        class="w-20 h-20 rounded z-10 bg-neutral-700 text-white flex justify-center items-center"
+        id="box"
+      >
+        Hello
+      </div>
+      <div
+        class="bg-slate-500 rounded absolute h-full w-full p-2 top-28 left-28 -rotate-12 newContainer"
+      ></div>
+    </div>
+    <script src="../src/flip.ts" type="module"></script>
+  </body>
+</html>

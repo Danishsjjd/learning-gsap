@@ -2,75 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GSAP - ScrollTrigger</title>
     <link rel="stylesheet" href="./src/assets/style.css" />
   </head>
   <body>
-    <div class="imgContainer">
-      <figure data-grid="img-1">
-        <img
-          src="https://source.unsplash.com/random/400x400"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <figure data-grid="img-2">
-        <img
-          src="https://source.unsplash.com/random/400x401"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <figure data-grid="img-3">
-        <img
-          src="https://source.unsplash.com/random/400x402"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <figure data-grid="img-4">
-        <img
-          src="https://source.unsplash.com/random/400x403"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <figure data-grid="img-5">
-        <img
-          src="https://source.unsplash.com/random/400x404"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
-      <figure data-grid="img-6">
-        <img
-          src="https://source.unsplash.com/random/400x405"
-          alt=""
-          class="w-full h-full object-cover"
-        />
-      </figure>
+    <!-- scroll down illusion -->
+    <div class="flex vContainer w-screen h-screen">
+      <!-- left -->
+      <div
+        class="w-1/3 h-full flex justify-center items-center text-7xl bg-yellow-900"
+      >
+        Left 🥰
+      </div>
+      <!-- right -->
+      <div class="w-[67%] h-full relative -z-10">
+        <div class="flex h-full right">
+          <div class="h-full grid place-items-center min-w-[500px] bg-blue-400">
+            Hello
+          </div>
+          <div class="h-full grid place-items-center min-w-[500px] bg-red-400">
+            <a
+              href="/flip.html"
+              class="underline font-bold text-xl text-blue-700 hover:text-blue-800"
+              >Flip animation</a
+            >
+          </div>
+          <div class="h-full grid place-items-center min-w-[500px] bg-zinc-400">
+            First Slide
+          </div>
+          <div
+            class="h-full grid place-items-center min-w-[500px] bg-emerald-400"
+          >
+            Third Slide
+          </div>
+        </div>
+      </div>
     </div>
-    <button
-      class="rounded-full px-4 py-2 text-lg bg-slate-700 text-white mx-auto block my-4"
-      id="changeBtn"
-    >
-      Toggle
-    </button>
+    <!-- scrub animation -->
     <div
-      class="bg-red-400/80 w-60 h-96 m-20 rounded-lg p-2 container overflow-hidden relative"
+      class="h-[100vh] w-screen flex flex-col justify-between bg-emerald-900"
     >
       <div
-        class="w-20 h-20 rounded z-10 bg-neutral-700 text-white flex justify-center items-center"
-        id="box"
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white a"
+      >
+        a
+      </div>
+      <div
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white b"
+      >
+        b
+      </div>
+      <div
+        class="w-32 h-32 bg-red-400 grid place-items-center text-xl text-white c"
+      >
+        c
+      </div>
+    </div>
+    <div class="relative w-screen h-screen mainContainer">
+      <div
+        class="bg-blue-400 absolute inset-0 grid place-items-center overflow-hidden hello"
       >
         Hello
       </div>
       <div
-        class="bg-slate-500 rounded absolute h-full w-full p-2 top-28 left-28 -rotate-12 newContainer"
-      ></div>
+        class="bg-red-400 absolute inset-0 grid place-items-center overflow-hidden top-[100%] first"
+      >
+        First Slide
+      </div>
+      <div
+        class="bg-zinc-400 absolute inset-0 grid place-items-center overflow-hidden left-[100%] second"
+      >
+        Second Slide
+      </div>
+      <div
+        class="bg-emerald-400 absolute inset-0 grid place-items-center overflow-hidden right-[100%] third"
+      >
+        Third Slide
+      </div>
     </div>
-    <script src="/src/flip.ts" type="module"></script>
+    <script type="module" src="/src/scrollTrigger.ts"></script>
   </body>
 </html>

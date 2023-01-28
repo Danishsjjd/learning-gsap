@@ -3,26 +3,39 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const panel = gsap.utils.toArray(".vContainer > div");
+const panel = document.querySelector(".vContainer .right") as HTMLDivElement;
 
 gsap.to(panel, {
-  xPercent: -100 * (panel.length - 1),
   ease: "none",
+  xPercent: -100,
   scrollTrigger: {
-    trigger: ".vContainer",
-    pin: true,
+    trigger: panel,
+    pin: ".vContainer",
     scrub: 1,
-    snap: 1 / (panel.length - 1),
-    // markers: true,
-    end: () => {
-      const width =
-        document.querySelector<HTMLElement>(".vContainer")?.offsetWidth;
-      //  call every single time when width is change
-      // console.log("width is", width);
-      return "+=" + width;
-    },
+    markers: true,
+    start: "top top",
+    end: `+=${panel.offsetWidth}`,
   },
 });
+
+// gsap.to(panel, {
+//   translate: -100 * (panel.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".vContainer",
+//     pin: true,
+//     scrub: 1,
+//     snap: 1 / (panel.length - 1),
+//     // markers: true,
+//     end: () => {
+//       const width =
+//         document.querySelector<HTMLElement>(".vContainer")?.offsetWidth;
+//       //  call every single time when width is change
+//       // console.log("width is", width);
+//       return "+=" + width;
+//     },
+//   },
+// });
 
 const selector = "b";
 

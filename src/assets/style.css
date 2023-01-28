@@ -13,6 +13,8 @@ body {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   gap: 1rem;
+  /* max-width: 650px;
+  margin: 10px auto 0 auto; */
 }
 
 [data-grid="img-1"] {
